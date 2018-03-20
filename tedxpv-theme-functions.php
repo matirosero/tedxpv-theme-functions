@@ -27,3 +27,21 @@ add_action( 'plugins_loaded', 'tedxf_load_textdomain' );
  */
 require_once( dirname( __FILE__ ) . '/includes/cpt/register-cpt.php' );
 require_once( dirname( __FILE__ ) . '/includes/cpt/register-tax.php' );
+
+
+/**
+ * Enqueue scripts.
+ *
+ * @since 0.1.0
+ */
+require_once( dirname( __FILE__ ) . '/includes/enqueue.php' );
+
+
+/**
+ * Admin tweaks.
+ *
+ * @since 0.1.0
+ */
+require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/speaker-columns.php' );
+require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/tedxvideo-columns.php' );
+require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/bulk-quickedit-functions.php' );
