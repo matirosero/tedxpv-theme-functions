@@ -49,3 +49,6 @@ require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/add-cpt-to-menu.php'
 
 // PV2015: lib/cpt-export.php
 require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/cpt-export-filters.php' );
+
+// PV2015: lib/yoast-seo-change-remove-opengraph.php
+require_once( dirname( __FILE__ ) . '/includes/yoast/yoast-seo-change-remove-opengraph.php' );
