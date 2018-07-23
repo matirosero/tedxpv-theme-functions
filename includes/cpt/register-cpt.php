@@ -3,8 +3,8 @@
 /*
  * Register post types
  */
-add_action( 'init', 'tedxf_register_post_types' );
-function tedxf_register_post_types() {
+add_action( 'init', 'tedx_register_post_types' );
+function tedx_register_post_types() {
 
 
 	//Speaker CTP

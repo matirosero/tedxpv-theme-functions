@@ -6,9 +6,10 @@
  * https://github.com/bamadesigner/manage-wordpress-posts-using-bulk-edit-and-quick-edit/blob/master/manage_wordpress_posts_using_bulk_edit_and_quick_edit.php
  */
 
-add_action( 'bulk_edit_custom_box', 'manage_wp_posts_be_qe_bulk_quick_edit_custom_box', 10, 2 );
-add_action( 'quick_edit_custom_box', 'manage_wp_posts_be_qe_bulk_quick_edit_custom_box', 10, 2 );
-function manage_wp_posts_be_qe_bulk_quick_edit_custom_box( $column_name, $post_type ) {
+add_action( 'bulk_edit_custom_box', 'tedx_bulk_quick_edit_custom_box', 10, 2 );
+add_action( 'quick_edit_custom_box', 'tedx_bulk_quick_edit_custom_box', 10, 2 );
+function tedx_bulk_quick_edit_custom_box( $column_name, $post_type ) {
+
 	switch ( $post_type ) {
 
 		case 'tedxvideo':
@@ -42,23 +43,15 @@ function manage_wp_posts_be_qe_bulk_quick_edit_custom_box( $column_name, $post_t
 						</div>
 					</fieldset><?php
 					break;
-
 			}
-
 			break;
-
 	}
-
 }
 
 
 
-
-
-
-
-add_action( 'save_post', 'manage_wp_posts_be_qe_save_post', 10, 2 );
-function manage_wp_posts_be_qe_save_post( $post_id, $post ) {
+add_action( 'save_post', 'tedx_bulk_quick_edit_save_post', 10, 2 );
+function tedx_bulk_quick_edit_save_post( $post_id, $post ) {
 	// pointless if $_POST is empty (this happens on bulk edit)
 	if ( empty( $_POST ) )
 		return $post_id;
@@ -100,8 +93,8 @@ function manage_wp_posts_be_qe_save_post( $post_id, $post ) {
 }
 
 
-add_action( 'wp_ajax_manage_wp_posts_using_bulk_quick_save_bulk_edit', 'manage_wp_posts_using_bulk_quick_save_bulk_edit' );
-function manage_wp_posts_using_bulk_quick_save_bulk_edit() {
+add_action( 'wp_ajax_manage_wp_posts_using_bulk_quick_save_bulk_edit', 'tedx_bulk_quick_edit_save_bulk_edit' );
+function tedx_bulk_quick_edit_save_bulk_edit() {
 	// we need the post IDs
 	$post_ids = ( isset( $_POST[ 'post_ids' ] ) && !empty( $_POST[ 'post_ids' ] ) ) ? $_POST[ 'post_ids' ] : NULL;
 
