@@ -46,9 +46,10 @@ require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/speaker-columns.php'
 require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/tedxvideo-columns.php' );
 require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/bulk-quickedit-functions.php' );
 require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/add-cpt-to-menu.php' );
+require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/yoast.php' );
 
 // PV2015: lib/cpt-export.php
-require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/cpt-export-filters.php' );
+// require_once( dirname( __FILE__ ) . '/includes/admin-tweaks/cpt-export-filters.php' );
 
 // PV2015: lib/yoast-seo-change-remove-opengraph.php
-require_once( dirname( __FILE__ ) . '/includes/yoast/yoast-seo-change-remove-opengraph.php' );
+// require_once( dirname( __FILE__ ) . '/includes/yoast/yoast-seo-change-remove-opengraph.php' );
