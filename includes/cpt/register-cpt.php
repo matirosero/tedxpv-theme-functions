@@ -6,6 +6,62 @@
 add_action( 'init', 'tedx_register_post_types' );
 function tedx_register_post_types() {
 
+	//FAQ CTP
+	register_post_type( 'ngg_pictures',
+		array(
+			'labels' => array(
+				'name' => __( 'NGG', 'tedxpv_custom' ),
+				'singular_name' => __( 'NGG', 'tedxpv_custom' ),
+				'add_new_item' => __( 'Add New NGG', 'tedxpv_custom' ),
+				'edit_item' => __( 'Edit NGG', 'tedxpv_custom' ),
+				'new_item' => __( 'New NGG', 'tedxpv_custom' ),
+				'view' => __( 'View NGG', 'tedxpv_custom' ),
+				'view_item' => __( 'View NGG', 'tedxpv_custom' ),
+				'search_items' => __( 'Search NGG', 'tedxpv_custom' ),
+				'not_found' => __( 'No NGG found', 'tedxpv_custom' ),
+				'not_found_in_trash' => __( 'No NGG found in Trash', 'tedxpv_custom' )
+			),
+			'public' => true,
+			'menu_position' => 24,
+			'menu_icon' => 'dashicons-format-chat',
+			'supports' => array( 'title', 'editor', 'revisions' ),
+			'rewrite' => false,
+			'has_archive' => false,
+			'exclude_from_search'   => true,
+			'publicly_queryable'    => false,
+
+		)
+	);
+
+
+
+	//FAQ CTP
+	register_post_type( 'faq',
+		array(
+			'labels' => array(
+				'name' => __( 'FAQ', 'tedxpv_custom' ),
+				'singular_name' => __( 'Question', 'tedxpv_custom' ),
+				'add_new_item' => __( 'Add New Question', 'tedxpv_custom' ),
+				'edit_item' => __( 'Edit Question', 'tedxpv_custom' ),
+				'new_item' => __( 'New Question', 'tedxpv_custom' ),
+				'view' => __( 'View Question', 'tedxpv_custom' ),
+				'view_item' => __( 'View Question', 'tedxpv_custom' ),
+				'search_items' => __( 'Search FAQ', 'tedxpv_custom' ),
+				'not_found' => __( 'No FAQ found', 'tedxpv_custom' ),
+				'not_found_in_trash' => __( 'No FAQ found in Trash', 'tedxpv_custom' )
+			),
+			'public' => true,
+			'menu_position' => 24,
+			'menu_icon' => 'dashicons-format-chat',
+			'supports' => array( 'title', 'editor', 'revisions' ),
+			'rewrite' => false,
+			'has_archive' => false,
+			'exclude_from_search'   => true,
+			'publicly_queryable'    => false,
+
+		)
+	);
+
 
 	//Speaker CTP
 	register_post_type( 'speaker',
